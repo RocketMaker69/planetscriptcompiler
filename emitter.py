@@ -1,6 +1,6 @@
 class Emitter:
-    def __init__(self):
-        with open("out.py", "w") as f:
+    def __init__(self, path):
+        with open(path, "w") as f:
             self.f = f
 
     def HeaderLine(self, line):
