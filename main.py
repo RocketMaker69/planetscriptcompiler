@@ -7,9 +7,9 @@ e = Emitter()
 with open(sys.argv[1], "r") as f:
     for l in f:
         if "=" in l:
-            n = l[:l.find("=")]
-            v = l[l.find("=")+3:-1]
-            e.Line(f"{n} = {v};\n")
+            # A variable declaration is the same in both PlanetScript and Python.
+            # No changes needed, so we can simply add the line to the file.
+            e.Line(l)
         if "Print" in l:
             a = l[l.find("t")+2:-1]
             if "\t" not in l:
