@@ -21,4 +21,5 @@ with open(sys.argv[1], "r") as f:
         if "Input" in l:
             a = l[6:-1]
             e.Line(f"    scanf(\"%f\", &{a});\n")
-    e.Line(f"    return 0")
+    e.Line(f"    return 0;\n")
+    e.Line(f"}")
