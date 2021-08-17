@@ -38,4 +38,5 @@ def Compile(path):
                 c = l[3:l.find(":")]
                 e.Line(f"    while {c}:\n")
     
+    e.Line("return 0\n")
     e.Line("\nmain()")
