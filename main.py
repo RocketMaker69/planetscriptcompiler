@@ -12,7 +12,7 @@ with open(sys.argv[1], "r") as f:
             e.Line(f"{n} = {v};\n")
         if "Print" in l:
             a = l[6:-1]
-            e.Line(f"print(f'{a}')\n")
+            e.Line(f"print(f\"{a}\")\n")
         if "Input" in l:
             a = l[5:]
-            e.Line(f"{a} = input()\n")
+            e.Line(f"{a} = input(\"\")\n")
