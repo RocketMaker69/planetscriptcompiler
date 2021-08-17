@@ -25,3 +25,9 @@ with open(sys.argv[1], "r") as f:
         if "If" in l:
             c = l[3:l.find(":")]
             e.Line(f"if {c}:\n")
+        if "For" in l:
+            c = l[3:l.find(":")]
+            e.Line(f"for {c}:\n")
+        if "While" in l:
+            c = l[3:l.find(":")]
+            e.Line(f"while {c}:\n")
