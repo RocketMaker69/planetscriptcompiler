@@ -9,6 +9,9 @@ def Compile(path):
     with open(path, "r") as f:
         e.HeaderLine(f"def main():\n")
         for l in f:
+            if "#Include" in l:
+                n = l[9:-1]
+                e.HeaderLine(f"    import {n}")
             if "=" in l:
                 # A variable declaration is the same in both PlanetScript and Python.
                 # No changes needed, so we can simply add the line to the file.
