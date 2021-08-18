@@ -27,3 +27,7 @@ class Interpreter:
                 self.LV(Data[a])
             elif i == "PRINT":
                 print(Data[a])
+            elif i == "INPUT":
+                x = input("")
+                self.Load(x)
+                self.SV("__input__")
