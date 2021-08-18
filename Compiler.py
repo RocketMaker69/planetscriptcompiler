@@ -14,3 +14,5 @@ class Compiler:
                 arg = l[5:]
                 newCode["data"].append(arg)
                 newCode["instructions"].append(("INPUT", newCode["data"].index(arg)))
+        
+        return newCode
