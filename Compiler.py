@@ -42,7 +42,9 @@ for l in i:
         o.write(f"{a} = input(\"\")\n")
     if "}" in l:
         cim = 0
-    for method in methods:
-        if method in l:
-            a = l[l.find(":")+1:]
-            o.write(f"{method}({a})\n")
+        for method in methods:
+            if method in l:
+                a = l[l.find(":")+1:]
+                o.write(f"{method}({a})\n")
+    if "#" in l:
+        o.write(l)
