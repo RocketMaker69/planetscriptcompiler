@@ -13,12 +13,12 @@ from string import ascii_letters as Letters
 TokenType_Number  = "Number"
 TokenType_Symbol  = "Symbol"
 TokenType_Keyword = "Keyword"
+Keywords          = [
+    "Let"
+]
 
-class Token:
-    def __init__(self, k, t):
-        self.k   = k
-        self.t   = t
-        self.tok = [self.k, self.t]
+def GetKeyword(k):
+    return k in Keywords
 
 
 
@@ -41,5 +41,17 @@ class Lexer:
     def Peek(self):
         return "\0" if self.p + 1 >= len(self.i) else self.i[self.p + 1]
 
-    def MakeTokens(self): pass
+    def MakeTokens(self):
+        if self.c in "+-*/":
+            self.tok.append([To])
+        if self.c in Letters:
+            self.s = self.p
+            while self.c in Letters:
+                self.Advance()
+            txt = self.i[self.s : self.p + 1]
+            if GetKeyword(txt):
+                self.tok.append(T
+            
+
+
 
